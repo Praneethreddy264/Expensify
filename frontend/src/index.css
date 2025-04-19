@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ThemeSwitch.css */
+.switch {
+  position: relative;
+  width: 55px;
+  height: 25px;
+  background-color: #ddd;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.switch .ball {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.5s;
+}
+
+.switch.dark {
+  background-color: #333;
+}
+
+.ball.dark {
+  background-color: #333;
+}
+
+.switch.dark .ball {
+  transform: translateX(30px);
+}
+
+.switch.light .ball {
+  transform: translateX(2px);
+}
+
+.inputStyles {
+  @apply bg-transparent appearance-none border border-gray-300 dark:border-gray-800 rounded w-full py-2 px-3 text-gray-700 dark:text-gray-500 outline-none focus:ring-1 ring-blue-500 dark:placeholder:text-gray-700;
+}
+
+.labelStyles {
+  @apply block text-gray-700 dark:text-gray-400 text-sm md:text-base mb-2;
+}
+
+/* input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+} */
